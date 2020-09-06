@@ -1,0 +1,24 @@
+{
+  "name": "poe-skills-overlay",
+  "version": "1.0.0",
+  "description": "Creates a transparent of your skills near your health bar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "pathofexile"
+  ],
+  "author": "Caio Siqueira",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "ffmpeg-static": "^4.2.7",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "electron": "^10.1.1"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "debug": false,
+  "log": true,
+  "screen": {
+    "width": 1920,
+    "height": 1080
+  },
+  "videoQuality": 12,
+  "fps": 60,
+  "groups": [
+    {
+      "name": "skills",
+      "screen": {
+        "sourceWidth": 0.1432291666666667,
+        "sourceHeight": 0.1111111111111111,
+        "offsetX": 0.734375,
+        "offsetY": 0.8796296296296297
+      },
+      "tooltips": [
+        {
+          "visible": true,
+          "opacity": 0.49,
+          "zoom": 1.08,
+          "name": "q-aura",
+          "img": {
+            "margin-left": "calc(-4px * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "668px",
+          "top": "194px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.55,
+          "zoom": 1.09,
+          "name": "w-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "726px",
+          "top": "194px"
+        },
+        {
+          "visible": false,
+          "opacity": 0.65,
+          "zoom": 0.57,
+          "name": "left-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 2) * zoom)",
+            "margin-top": "calc((69px - 72px) * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "410px",
+          "top": "116px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.65,
+          "zoom": 1.09,
+          "name": "e-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 2) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "786px",
+          "top": "194px"
+        },
+        {
+          "visible": false,
+          "opacity": 0.65,
+          "zoom": 0.5,
+          "name": "t-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 4) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "424px",
+          "top": "298px"
+        },
+        {
+          "visible": false,
+          "opacity": 0.65,
+          "zoom": 0.5,
+          "name": "mid-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 3) * zoom)",
+            "margin-top": "calc((69px + -72px) * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "459px",
+          "top": "178px"
+        },
+        {
+          "visible": false,
+          "opacity": 0.65,
+          "zoom": 2.39,
+          "name": "r-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 3) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "261px",
+          "top": "199px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.47,
+          "zoom": 2.25,
+          "name": "right-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 4) * zoom)",
+            "margin-top": "calc((69px + -72px) * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "826px",
+          "top": "286px"
+        }
+      ]
+    }
+  ]
+}

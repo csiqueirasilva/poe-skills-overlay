@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: unset;
+	user-select: none;
+	overflow: hidden;
+}
+
+.group-wrapper {
+	overflow: hidden;
+	position: absolute;
+	cursor: hand;
+}
+
+#options-menu {
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+
+#options-menu svg {
+	width: 0.75em;
+	height: 0.75em;
+	cursor: pointer;
+	stroke: white;
+}
+
+.overlay-btn {
+	
+}
+
+.overlay-btn.primary {
+	background-color: #007bff;
+	color: white;
+}
+
+.config-edit-group {
+	z-index: 100000000;
+}
