@@ -1,5 +1,5 @@
 {
-  "debug": false,
+  "debug": true,
   "log": true,
   "screen": {
     "width": 1920,
@@ -28,22 +28,8 @@
           },
           "width": "calc(48px * zoom)",
           "height": "calc(48px * zoom)",
-          "left": "668px",
-          "top": "194px"
-        },
-        {
-          "visible": true,
-          "opacity": 0.55,
-          "zoom": 1.09,
-          "name": "w-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "726px",
-          "top": "194px"
+          "left": "665px",
+          "top": "182px"
         },
         {
           "visible": false,
@@ -58,20 +44,6 @@
           "height": "calc(48px * zoom)",
           "left": "410px",
           "top": "116px"
-        },
-        {
-          "visible": true,
-          "opacity": 0.65,
-          "zoom": 1.09,
-          "name": "e-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 2) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "786px",
-          "top": "194px"
         },
         {
           "visible": false,
@@ -89,22 +61,8 @@
         },
         {
           "visible": false,
-          "opacity": 0.65,
-          "zoom": 0.5,
-          "name": "mid-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 3) * zoom)",
-            "margin-top": "calc((69px + -72px) * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "459px",
-          "top": "178px"
-        },
-        {
-          "visible": false,
-          "opacity": 0.65,
-          "zoom": 2.39,
+          "opacity": 0.91,
+          "zoom": 2.8,
           "name": "r-aura",
           "img": {
             "margin-left": "calc((-4px - 55px * 3) * zoom)",
@@ -112,12 +70,40 @@
           },
           "width": "calc(48px * zoom)",
           "height": "calc(48px * zoom)",
-          "left": "261px",
-          "top": "199px"
+          "left": "250px",
+          "top": "118px"
+        },
+        {
+          "visible": false,
+          "opacity": 0.65,
+          "zoom": 1.65,
+          "name": "mid-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 3) * zoom)",
+            "margin-top": "calc((69px + -72px) * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "503px",
+          "top": "138px"
         },
         {
           "visible": true,
-          "opacity": 0.47,
+          "opacity": 0.36,
+          "zoom": 1.09,
+          "name": "w-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "666px",
+          "top": "130px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.54,
           "zoom": 2.25,
           "name": "right-aura",
           "img": {
@@ -126,8 +112,22 @@
           },
           "width": "calc(48px * zoom)",
           "height": "calc(48px * zoom)",
-          "left": "826px",
-          "top": "286px"
+          "left": "719px",
+          "top": "130px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.39,
+          "zoom": 1.09,
+          "name": "e-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 2) * zoom)",
+            "margin-top": "calc(-72px * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "668px",
+          "top": "231px"
         }
       ]
     }
