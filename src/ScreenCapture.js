@@ -27,7 +27,7 @@ function createStream(filename, win, group) {
 	
 	const proc = spawn(
 		ffmpeg,
-	  ["-f", "gdigrab", "-framerate", fps, "-video_size", sizeX + "x" + sizeY, "-offset_x", offsetX, "-offset_y", offsetY, "-draw_mouse", "0", "-i", "title=Path of Exile", "-f", "mjpeg", "-huffman", "optimal", "-qscale", quality, "-"],
+	  ["-f", "gdigrab", "-framerate", fps, "-video_size", sizeX + "x" + sizeY, "-offset_x", offsetX, "-offset_y", offsetY, "-draw_mouse", "0", "-i", "title=Path of Exile", "-preset", "ultrafast", "-tune", "zerolatency", "-f", "mjpeg", "-huffman", "optimal", "-qscale", quality, "-"],
 	  { stdio: "pipe" }
 	);
 
@@ -36,6 +36,7 @@ function createStream(filename, win, group) {
 	stream.streamId = streamId++;
 	
 	const file = fs.createWriteStream(filename);
+
 	stream.pipe(file);
 
 	setTimeout(() => {

@@ -6,7 +6,7 @@
     "height": 1080
   },
   "videoQuality": 12,
-  "fps": 60,
+  "fps": 15,
   "groups": [
     {
       "name": "skills",
@@ -103,20 +103,6 @@
         },
         {
           "visible": true,
-          "opacity": 0.54,
-          "zoom": 2.25,
-          "name": "right-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 4) * zoom)",
-            "margin-top": "calc((69px + -72px) * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "719px",
-          "top": "130px"
-        },
-        {
-          "visible": true,
           "opacity": 0.39,
           "zoom": 1.09,
           "name": "e-aura",
@@ -128,6 +114,20 @@
           "height": "calc(48px * zoom)",
           "left": "668px",
           "top": "231px"
+        },
+        {
+          "visible": true,
+          "opacity": 0.44,
+          "zoom": 1.64,
+          "name": "right-aura",
+          "img": {
+            "margin-left": "calc((-4px - 55px * 4) * zoom)",
+            "margin-top": "calc((69px + -72px) * zoom)"
+          },
+          "width": "calc(48px * zoom)",
+          "height": "calc(48px * zoom)",
+          "left": "719px",
+          "top": "130px"
         }
       ]
     }
