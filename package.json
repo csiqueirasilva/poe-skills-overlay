@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.2",
-    "ffmpeg-static": "^4.2.7",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "tmp": "^0.2.1"

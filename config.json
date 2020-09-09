@@ -1,12 +1,10 @@
 {
-  "debug": true,
-  "log": true,
+  "debug": false,
+  "log": false,
   "screen": {
     "width": 1920,
     "height": 1080
   },
-  "videoQuality": 12,
-  "fps": 15,
   "groups": [
     {
       "name": "skills",
@@ -112,8 +110,8 @@
           },
           "width": "calc(48px * zoom)",
           "height": "calc(48px * zoom)",
-          "left": "668px",
-          "top": "231px"
+          "left": "666px",
+          "top": "233px"
         },
         {
           "visible": true,
