@@ -128,6 +128,26 @@
           "top": "130px"
         }
       ]
-    }
+    },
+    {
+      "name": "flasks",
+      "screen": {
+        "sourceWidth": 0.1185,
+        "sourceHeight": 0.09,
+        "offsetX": 0.1585,
+        "offsetY": 0.9075
+      },
+	  "tooltips": []
+	},
+	{
+      "name": "buffsdebuffs",
+      "screen": {
+        "sourceWidth": 0.1185,
+        "sourceHeight": 0.09,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+	  "tooltips": []
+	}
   ]
 }
