@@ -1,5 +1,5 @@
 {
-  "debug": true,
+  "debug": false,
   "log": false,
   "screen": {
     "width": 1920,

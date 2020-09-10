@@ -4,7 +4,9 @@
   "description": "Creates a transparent of your skills near your health bar",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+	"pack": "electron-builder --dir --x64",
+	"dist": "electron-builder --x64"
   },
   "keywords": [
     "pathofexile"
@@ -18,6 +20,19 @@
     "tmp": "^0.2.1"
   },
   "devDependencies": {
-    "electron": "^10.1.1"
+    "electron": "^10.1.1",
+    "electron-builder": "^22.8.0"
+  },
+  "build": {
+	"appId": "poe-skills-overlay",
+	"extends": null,
+	"files": [
+	],
+	"extraFiles": [
+	  "./bin/**",
+	  "./config.json",
+	  "./config_ref.json",
+	  "./config_moregroups.json"
+	]
   }
 }

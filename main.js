@@ -31,7 +31,7 @@ function createWindow () {
 	
 	config.groups.forEach((el) => stream(win, el));
 	
-	win.loadFile('index.html');
+	win.loadFile('./index.html');
 	
 	let webContents = win.webContents;
 	
