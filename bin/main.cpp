@@ -47,6 +47,7 @@ LONG bottom;
 LPBYTE shot;
 IWICImagingFactory* factory = nullptr;
 IWICBitmapEncoder* encoder = nullptr;
+IPropertyBag2* pPropertybag = NULL;
 
 void sendIStreamToOutput (IStream * pIStream) {
 
@@ -86,15 +87,24 @@ HRESULT SavePixelsToFile32bppPBGRA()
     IWICStream* streamOut = nullptr;
     IStream * streamIn = nullptr;
     GUID pf = GUID_WICPixelFormat32bppPBGRA;
-    BOOL coInit = CoInitialize(nullptr);
-    
-    HRCHECK(CoCreateInstance(CLSID_WICImagingFactory, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&factory)));
+
     HRCHECK(factory->CreateEncoder(GUID_ContainerFormatPng, nullptr, &encoder));
     HRCHECK(factory->CreateStream(&streamOut));
     HRCHECK(CreateStreamOnHGlobal(NULL, true, &streamIn));
     HRCHECK(streamOut->InitializeFromIStream(streamIn));
     HRCHECK(encoder->Initialize(streamOut, WICBitmapEncoderNoCache));
-    HRCHECK(encoder->CreateNewFrame(&frame, nullptr)); // we don't use options here
+    HRCHECK(encoder->CreateNewFrame(&frame, &pPropertybag));
+    
+    {
+        PROPBAG2 option = { 0 };
+        option.pstrName = (LPOLESTR) L"FilterOption";
+        VARIANT varValue;
+        VariantInit(&varValue);
+        varValue.vt = VT_UI1;
+        varValue.bVal = WICPngFilterPaeth;
+        HRCHECK(pPropertybag->Write(1, &option, &varValue));
+    }
+
     HRCHECK(frame->Initialize(nullptr)); // we dont' use any options here
     HRCHECK(frame->SetSize(exportWidth, exportHeight));
     HRCHECK(frame->SetPixelFormat(&pf));
@@ -109,9 +119,8 @@ cleanup:
     RELEASE(streamOut);
     RELEASE(frame);
     RELEASE(encoder);
-    RELEASE(factory);
-    if (coInit) CoUninitialize();
-    
+    RELEASE(pPropertybag);
+
     return hr;
 }
 
@@ -171,9 +180,9 @@ int main(int argc, char ** argv)
 
     shot = new BYTE[pitch * exportHeight];
 
-    
+    BOOL coInit = CoInitialize(nullptr);
 
-    
+    CoCreateInstance(CLSID_WICImagingFactory, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&factory));
     
 #if _DEBUG == 0
     while(true) {
@@ -187,6 +196,8 @@ int main(int argc, char ** argv)
     RELEASE(surface);
     RELEASE(device);
     RELEASE(d3d);
+    RELEASE(factory);
+    if (coInit) CoUninitialize();
 
     return 0;
 }

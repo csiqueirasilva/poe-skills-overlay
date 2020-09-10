@@ -110,13 +110,13 @@
           },
           "width": "calc(48px * zoom)",
           "height": "calc(48px * zoom)",
-          "left": "666px",
-          "top": "233px"
+          "left": "665px",
+          "top": "235px"
         },
         {
           "visible": true,
           "opacity": 0.44,
-          "zoom": 1.64,
+          "zoom": 2.61,
           "name": "right-aura",
           "img": {
             "margin-left": "calc((-4px - 55px * 4) * zoom)",
