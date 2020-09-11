@@ -1,133 +1,129 @@
 {
-  "debug": false,
-  "log": false,
-  "screen": {
-    "width": 1920,
-    "height": 1080
-  },
-  "groups": [
-    {
-      "name": "skills",
-      "screen": {
-        "sourceWidth": 0.1432291666666667,
-        "sourceHeight": 0.1111111111111111,
-        "offsetX": 0.734375,
-        "offsetY": 0.8796296296296297
-      },
-      "tooltips": [
-        {
-          "visible": true,
-          "opacity": 0.49,
-          "zoom": 1.08,
-          "name": "q-aura",
-          "img": {
-            "margin-left": "calc(-4px * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "665px",
-          "top": "182px"
-        },
-        {
-          "visible": false,
-          "opacity": 0.65,
-          "zoom": 0.57,
-          "name": "left-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 2) * zoom)",
-            "margin-top": "calc((69px - 72px) * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "410px",
-          "top": "116px"
-        },
-        {
-          "visible": false,
-          "opacity": 0.65,
-          "zoom": 0.5,
-          "name": "t-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 4) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "424px",
-          "top": "298px"
-        },
-        {
-          "visible": false,
-          "opacity": 0.91,
-          "zoom": 2.8,
-          "name": "r-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 3) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "250px",
-          "top": "118px"
-        },
-        {
-          "visible": false,
-          "opacity": 0.65,
-          "zoom": 1.65,
-          "name": "mid-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 3) * zoom)",
-            "margin-top": "calc((69px + -72px) * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "503px",
-          "top": "138px"
-        },
-        {
-          "visible": true,
-          "opacity": 0.36,
-          "zoom": 1.09,
-          "name": "w-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "666px",
-          "top": "130px"
-        },
-        {
-          "visible": true,
-          "opacity": 0.39,
-          "zoom": 1.09,
-          "name": "e-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 2) * zoom)",
-            "margin-top": "calc(-72px * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "665px",
-          "top": "235px"
-        },
-        {
-          "visible": true,
-          "opacity": 0.44,
-          "zoom": 2.61,
-          "name": "right-aura",
-          "img": {
-            "margin-left": "calc((-4px - 55px * 4) * zoom)",
-            "margin-top": "calc((69px + -72px) * zoom)"
-          },
-          "width": "calc(48px * zoom)",
-          "height": "calc(48px * zoom)",
-          "left": "719px",
-          "top": "130px"
-        }
-      ]
-    }
-  ]
+	"debug": false,
+	"log": false,
+	"groups": [
+		{
+			"name": "skills",
+			"screen": {
+				"sourceWidth": 0.1432291666666667,
+				"sourceHeight": 0.1111111111111111,
+				"offsetX": 0.734375,
+				"offsetY": 0.8796296296296296
+			},
+			"tooltips": [
+				{
+					"visible": true,
+					"opacity": 0.65,
+					"zoom": 0.5,
+					"name": "q-aura",
+					"img": {
+						"margin-left": "calc(-0.46296296296296vh * zoom)",
+						"margin-top": "calc(-8.33333333333333vh * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw - (5.75539568345324vh * zoom))",
+					"top": "calc(29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,
+					"zoom": 0.5,
+					"name": "w-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh) * zoom)",
+						"margin-top": "calc(-8.33333333333333vh * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) - (5.75539568345324vh * zoom))",
+					"top": "calc(29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,
+					"zoom": 0.5,
+					"name": "e-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 2) * zoom)",
+						"margin-top": "calc(-8.33333333333333vh * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 2 - (5.75539568345324vh * zoom))",
+					"top": "calc(29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,
+					"zoom": 0.5,
+					"name": "r-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 3) * zoom)",
+						"margin-top": "calc(-8.33333333333333vh * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 3 - (5.75539568345324vh * zoom))",
+					"top": "calc(29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.5,
+					"name": "t-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 4) * zoom)",
+						"margin-top": "calc(-8.33333333333333vh * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 4 - (5.75539568345324vh * zoom))",
+					"top": "calc(29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": false,
+					"opacity": 0.65,				
+					"zoom": 0.5,
+					"name": "left-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 2) * zoom)",
+						"margin-top": "calc((7.98611111111111vh - 8.33333333333333vh) * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 2 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.5,
+					"name": "mid-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 3) * zoom)",
+						"margin-top": "calc((7.98611111111111vh + -8.33333333333333vh) * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 3 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.5,
+					"name": "right-aura",
+					"img": {
+						"margin-left": "calc((-0.46296296296296vh - 6.36574074074074vh * 4) * zoom)",
+						"margin-top": "calc((7.98611111111111vh + -8.33333333333333vh) * zoom)"
+					},
+					"width": "calc(5.75539568345324vh * zoom)",
+					"height": "calc(5.75539568345324vh * zoom)",
+					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 4 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				}
+			]
+		}
+	]
 }

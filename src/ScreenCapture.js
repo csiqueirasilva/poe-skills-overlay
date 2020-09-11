@@ -9,16 +9,20 @@ const soi = Buffer.from([0x89, 0x50, 0x4e, 0x47]);
 // End of Image
 const eoi = Buffer.from([0x49, 0x45, 0x4e, 0x44, 0xae, 0x42, 0x60, 0x82]);
 
-async function captureWindow (win, group) {
+async function captureWindow (win, group, width, height) {
 	
 	const elementId = group.name;
 	
 	const config = Config.get();
 
-	const offsetX = parseInt(config.screen.width * group.screen.offsetX);
-	const offsetY = parseInt(config.screen.height * group.screen.offsetY);
-	const sizeX = parseInt(config.screen.width * group.screen.sourceWidth);
-	const sizeY = parseInt(config.screen.height * group.screen.sourceHeight);
+	const refAspect = 16/9;
+	const aspect = width/height;
+	const rateAspect = refAspect / aspect;
+
+	const offsetX = parseInt(width - width * ((1 - group.screen.offsetX) * rateAspect));
+	const offsetY = parseInt(height * group.screen.offsetY);
+	const sizeX = parseInt(width * group.screen.sourceWidth * rateAspect);
+	const sizeY = parseInt(height * group.screen.sourceHeight);
 	
 	let args = [offsetX, offsetY, offsetX + sizeX, offsetY + sizeY];
 	

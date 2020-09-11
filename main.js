@@ -8,12 +8,8 @@ let config = Config.readConfig();
 
 function createWindow () {
 
-	const height = config.screen.height;
-	const width = config.screen.width;
-
 	const win = new electron.BrowserWindow({
-		width: width,
-		height: height,
+		fullscreen: true,
 		transparent: true, 
 		frame: false,
 		alwaysOnTop: true,
@@ -25,12 +21,17 @@ function createWindow () {
 		}
 	});
 	
+	const display = electron.screen.getPrimaryDisplay();
+	
+	const height = display.bounds.height * display.scaleFactor;
+	const width = display.bounds.width * display.scaleFactor;
+
 	win.setIgnoreMouseEvents(true, { forward: true });
 	
 	win.setAlwaysOnTop(true, 'pop-up-menu');
 	
-	config.groups.forEach((el) => stream(win, el));
-	
+	config.groups.forEach((el) => stream(win, el, width, height));
+
 	win.loadFile('./index.html');
 	
 	let webContents = win.webContents;

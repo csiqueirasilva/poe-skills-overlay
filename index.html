@@ -76,6 +76,8 @@
 	
 	<script>
 		win.setIgnoreMouseEvents(true, { forward: true });
+		
+		ipcRenderer.send('app-ready', {w: window.innerWidth, h: window.innerHeight});
 	</script>
 	
 </body>
