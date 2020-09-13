@@ -35,20 +35,28 @@ async function captureWindow (win, group, width, height) {
 	const stream = proc.stdout;
 	
 	let data = [];
+	let image;
+	let end;
+	let remaining;
 	
 	stream.on("data", chunk => {
 		
 		//var start = chunk.indexOf(soi);
-		var end = chunk.indexOf(eoi, chunk.length - eoi.length);
+		end = chunk.indexOf(eoi, chunk.length - eoi.length);
 
 		data.push(chunk);
 		
 		if(end !== -1) {
-			let image = Buffer.concat(data);
+			image = Buffer.concat(data);
 			if(!win.isDestroyed()) {
 				win.webContents.send('capture-' + elementId, Buffer.from(image).toString('base64'));
 			}
 			data = [];
+			// if remaining data
+			remaining = chunk.slice(end + eoi.length);
+			if(remaining.length > 0) {
+				data.push(remaining);
+			}
 		}
 		
 	});
