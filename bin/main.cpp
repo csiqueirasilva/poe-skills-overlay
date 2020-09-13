@@ -25,7 +25,10 @@
 
 #define _DEBUG 0
 
-UINT bytesPerPixel = 4;
+UINT bytesPerPixel32 = 4;
+UINT bytesPerPixel24 = 3;
+UINT stride32;
+UINT stride24;
 UINT Height = 0;
 UINT Width = 0;
 UINT exportHeight = 0;
@@ -48,6 +51,9 @@ LPBYTE shot;
 IWICImagingFactory* factory = nullptr;
 IWICBitmapEncoder* encoder = nullptr;
 IPropertyBag2* pPropertybag = NULL;
+int endPixelsBuffer;
+int startPixelsBuffer;
+int sizePixelsBuffer;
 
 void sendIStreamToOutput (IStream * pIStream) {
 
@@ -68,7 +74,7 @@ void sendIStreamToOutput (IStream * pIStream) {
 
 #if _DEBUG == 1
     FILE* f;
-    fopen_s(&f, "out2.png", "wb");
+    fopen_s(&f, "out.jpg", "wb");
     fwrite(bits, size, 1, f);
     fclose(f);
 #else
@@ -86,9 +92,9 @@ HRESULT SavePixelsToFile32bppPBGRA()
     IWICBitmapFrameEncode* frame = nullptr;
     IWICStream* streamOut = nullptr;
     IStream * streamIn = nullptr;
-    GUID pf = GUID_WICPixelFormat32bppPBGRA;
+    GUID pf = GUID_WICPixelFormat24bppRGB;
 
-    HRCHECK(factory->CreateEncoder(GUID_ContainerFormatPng, nullptr, &encoder));
+    HRCHECK(factory->CreateEncoder(GUID_ContainerFormatJpeg, nullptr, &encoder));
     HRCHECK(factory->CreateStream(&streamOut));
     HRCHECK(CreateStreamOnHGlobal(NULL, true, &streamIn));
     HRCHECK(streamOut->InitializeFromIStream(streamIn));
@@ -97,18 +103,18 @@ HRESULT SavePixelsToFile32bppPBGRA()
     
     {
         PROPBAG2 option = { 0 };
-        option.pstrName = (LPOLESTR) L"FilterOption";
+        option.pstrName = const_cast<LPOLESTR>(L"ImageQuality");
         VARIANT varValue;
         VariantInit(&varValue);
-        varValue.vt = VT_UI1;
-        varValue.bVal = WICPngFilterPaeth;
+        varValue.vt = VT_R4;
+        varValue.fltVal = 0.0; // 0 to 1; default 0.9; minimum quality
         HRCHECK(pPropertybag->Write(1, &option, &varValue));
     }
 
     HRCHECK(frame->Initialize(nullptr)); // we dont' use any options here
     HRCHECK(frame->SetSize(exportWidth, exportHeight));
     HRCHECK(frame->SetPixelFormat(&pf));
-    HRCHECK(frame->WritePixels(exportHeight, pitch, pitch * exportHeight, shot));
+    HRCHECK(frame->WritePixels(exportHeight, exportWidth * bytesPerPixel24, sizePixelsBuffer, shot));
     HRCHECK(frame->Commit());
     HRCHECK(encoder->Commit());
 
@@ -130,10 +136,26 @@ HRESULT Direct3D9TakeScreenshots()
 
     // get the data
     HRCHECK(device->GetFrontBufferData(0, surface));
-    
+
     // copy it into our buffers
     HRCHECK(surface->LockRect(&rc, &cropRect, D3DLOCK_NO_DIRTY_UPDATE | D3DLOCK_READONLY));
-    CopyMemory(shot, rc.pBits, pitch * bottom - (top * pitch + bytesPerPixel * left));
+    //CopyMemory(shot, rc.pBits, pitch * bottom - (top * pitch + bytesPerPixel * left));
+
+    {
+        LPBYTE inputBuf = (LPBYTE)rc.pBits;
+        int i = 0, j = 0;
+
+        // copy memory 32bpp to 24bpp
+        for (int y = 0, i = 0, j = 0; y < (bottom - top); y++, i = y * bytesPerPixel32 * Width, j = y * stride24) {
+            for (int x = left, xI = 0, xJ = 0; x < right; x++, xI = xI + bytesPerPixel32, xJ = xJ + bytesPerPixel24) {
+                shot[j + xJ] = inputBuf[i + xI];
+                shot[j + xJ + 1] = inputBuf[i + xI + 1];
+                shot[j + xJ + 2] = inputBuf[i + xI + 2];
+                // discard alpha
+            }
+        }
+    }
+
     HRCHECK(surface->UnlockRect());
     
     HRCHECK(SavePixelsToFile32bppPBGRA());
@@ -176,14 +198,21 @@ int main(int argc, char ** argv)
     exportHeight = abs(cropRect.top - cropRect.bottom);
     exportWidth = abs(cropRect.left - cropRect.right);
 
-    pitch = Width * bytesPerPixel;
+    pitch = Width * bytesPerPixel32;
 
-    shot = new BYTE[pitch * exportHeight];
+    shot = new BYTE[bytesPerPixel24 * exportHeight * exportWidth];
 
     BOOL coInit = CoInitialize(nullptr);
 
     CoCreateInstance(CLSID_WICImagingFactory, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&factory));
     
+    endPixelsBuffer = pitch * bottom;
+    startPixelsBuffer = (top * pitch + bytesPerPixel32 * left);
+    sizePixelsBuffer = endPixelsBuffer - startPixelsBuffer;
+
+    stride24 = bytesPerPixel24 * exportWidth;
+    stride32 = bytesPerPixel32 * exportWidth;
+
 #if _DEBUG == 0
     while(true) {
 #endif

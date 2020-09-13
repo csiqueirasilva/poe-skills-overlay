@@ -5,9 +5,10 @@ const Logger = require('./Logger');
 const Config = require('./Config');
 
 // Start of Image
-const soi = Buffer.from([0x89, 0x50, 0x4e, 0x47]);
+const soi = Buffer.from([0xff, 0xd8]);
+
 // End of Image
-const eoi = Buffer.from([0x49, 0x45, 0x4e, 0x44, 0xae, 0x42, 0x60, 0x82]);
+const eoi = Buffer.from([0xff, 0xd9]);
 
 async function captureWindow (win, group, width, height) {
 	
