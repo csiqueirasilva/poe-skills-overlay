@@ -7,7 +7,7 @@
 			"screen": {
 				"sourceWidth": 0.1432291666666667,
 				"sourceHeight": 0.1111111111111111,
-				"offsetX": 0.734375,
+				"offsetX": -0.265625,
 				"offsetY": 0.8796296296296296
 			},
 			"tooltips": [
@@ -121,6 +121,87 @@
 					"width": "calc(5.75539568345324vh * zoom)",
 					"height": "calc(5.75539568345324vh * zoom)",
 					"left": "calc(50vw + (5.75539568345324vh * zoom * 1.1) * 4 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				}
+			]
+		},
+		{
+			"name": "flasks",
+			"screen": {
+				"sourceWidth": 0.1145833333333333,
+				"sourceHeight": 0.09125,
+				"offsetX": 0.1614583333333333,
+				"offsetY": 0.9075
+			},
+			"tooltips": [
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.75,
+					"name": "flask1-aura",
+					"img": {
+						"margin-left": "0px",
+						"margin-top": "0px"
+					},
+					"width": "calc(0.775 * 5.75539568345324vh * zoom)",
+					"height": "calc(2 * 5.75539568345324vh * zoom)",
+					"left": "calc(30vw + (5.75539568345324vh * zoom * 1.1) * 4 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.75,
+					"name": "flask2-aura",
+					"img": {
+						"margin-left": "calc(-0.915 * 5.75539568345324vh * zoom)",
+						"margin-top": "0px"
+					},
+					"width": "calc(0.775 * 5.75539568345324vh * zoom)",
+					"height": "calc(2 * 5.75539568345324vh * zoom)",
+					"left": "calc(30vw + (5.75539568345324vh * zoom * 1.1) * 5 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.75,
+					"name": "flask3-aura",
+					"img": {
+						"margin-left": "calc(2 * -0.915 * 5.75539568345324vh * zoom)",
+						"margin-top": "0px"
+					},
+					"width": "calc(0.775 * 5.75539568345324vh * zoom)",
+					"height": "calc(2 * 5.75539568345324vh * zoom)",
+					"left": "calc(30vw + (5.75539568345324vh * zoom * 1.1) * 6 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.75,
+					"name": "flask4-aura",
+					"img": {
+						"margin-left": "calc(3 * -0.915 * 5.75539568345324vh * zoom)",
+						"margin-top": "0px"
+					},
+					"width": "calc(0.775 * 5.75539568345324vh * zoom)",
+					"height": "calc(2 * 5.75539568345324vh * zoom)",
+					"left": "calc(30vw + (5.75539568345324vh * zoom * 1.1) * 7 - (5.75539568345324vh * zoom))",
+					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
+				},
+				{
+					"visible": true,
+					"opacity": 0.65,				
+					"zoom": 0.75,
+					"name": "flask5-aura",
+					"img": {
+						"margin-left": "calc(4 * -0.915 * 5.75539568345324vh * zoom)",
+						"margin-top": "0px"
+					},
+					"width": "calc(0.775 * 5.75539568345324vh * zoom)",
+					"height": "calc(2 * 5.75539568345324vh * zoom)",
+					"left": "calc(30vw + (5.75539568345324vh * zoom * 1.1) * 8 - (5.75539568345324vh * zoom))",
 					"top": "calc((-5.75539568345324vh * zoom * 1.1) + 29.5vh - (5.75539568345324vh * zoom))"
 				}
 			]

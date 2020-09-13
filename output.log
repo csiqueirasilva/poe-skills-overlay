@@ -2,4 +2,101 @@
 restarting capture process[2020/09/06 21:47:35]
 erased temp file C:\Users\hawaii\AppData\Local\Temp\tmp-14132-usdlj5wtrtyL[2020/09/06 21:51:25]
 restarting capture process[2020/09/06 21:51:35]
-erased temp file C:\Users\hawaii\AppData\Local\Temp\tmp-14132-u6fI6G3KlGzg
+erased temp file C:\Users\hawaii\AppData\Local\Temp\tmp-14132-u6fI6G3KlGzg[2020/09/13 12:03:11]
+left, top, right, bottom[2020/09/13 12:03:11]
+996,676,1191,761[2020/09/13 12:03:11]
+left, top, right, bottom[2020/09/13 12:03:11]
+220,697,376,767[2020/09/13 12:03:12]
+initiating skills group[2020/09/13 12:03:12]
+rateRatio, width, height[2020/09/13 12:03:12]
+1.0049019607843137[2020/09/13 12:03:12]
+initiating flasks group[2020/09/13 12:03:12]
+rateRatio, width, height[2020/09/13 12:03:12]
+1.0049019607843137[2020/09/13 12:03:57] left, top, right, bottom
+[2020/09/13 12:03:57] 996,676,1191,761
+[2020/09/13 12:03:57] left, top, right, bottom
+[2020/09/13 12:03:57] 220,697,376,767
+[2020/09/13 12:03:58] initiating skills group
+[2020/09/13 12:03:58] rateRatio, width, height
+[2020/09/13 12:03:58] 1.0049019607843137
+[2020/09/13 12:03:58] initiating flasks group
+[2020/09/13 12:03:58] rateRatio, width, height
+[2020/09/13 12:03:58] 1.0049019607843137
+[2020/09/13 12:05:36] starting app with following parameters: width, height, scaleFactor
+[2020/09/13 12:05:36] 1360
+[2020/09/13 12:05:36] left, top, right, bottom
+[2020/09/13 12:05:36] 996,676,1191,761
+[2020/09/13 12:05:36] left, top, right, bottom
+[2020/09/13 12:05:36] 220,697,376,767
+[2020/09/13 12:05:37] initiating skills group
+[2020/09/13 12:05:37] rateRatio, width, height
+[2020/09/13 12:05:37] 1.0049019607843137
+[2020/09/13 12:05:37] initiating flasks group
+[2020/09/13 12:05:37] rateRatio, width, height
+[2020/09/13 12:05:37] 1.0049019607843137
+[2020/09/13 12:06:23] starting app with following parameters: width, height, scaleFactor
+[2020/09/13 12:06:23] 1360
+[2020/09/13 12:06:23] display dump from electron
+[2020/09/13 12:06:23] [object Object]
+[2020/09/13 12:06:23] left, top, right, bottom
+[2020/09/13 12:06:23] 996,676,1191,761
+[2020/09/13 12:06:23] left, top, right, bottom
+[2020/09/13 12:06:23] 220,697,376,767
+[2020/09/13 12:06:24] initiating skills group
+[2020/09/13 12:06:24] rateRatio, width, height
+[2020/09/13 12:06:24] 1.0049019607843137
+[2020/09/13 12:06:24] initiating flasks group
+[2020/09/13 12:06:24] rateRatio, width, height
+[2020/09/13 12:06:24] 1.0049019607843137
+[2020/09/13 12:09:04] [object Arguments]
+[2020/09/13 12:09:04] [object Arguments]
+[2020/09/13 12:09:04] [object Arguments]
+[2020/09/13 12:09:05] [object Arguments]
+[2020/09/13 12:09:05] [object Arguments]
+[2020/09/13 12:09:05] [object Arguments]
+[2020/09/13 12:09:05] [object Arguments]
+[2020/09/13 12:09:05] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:09:06] [object Arguments]
+[2020/09/13 12:10:27] starting app with following parameters: width, height, scaleFactor
+[2020/09/13 12:10:27] 1360,768.75,1.25
+[2020/09/13 12:10:27] display dump from electron
+[2020/09/13 12:10:27] [object Object]
+[2020/09/13 12:10:27] left, top, right, bottom
+[2020/09/13 12:10:27] 996,676,1191,761
+[2020/09/13 12:10:27] left, top, right, bottom
+[2020/09/13 12:10:27] 220,697,376,767
+[2020/09/13 12:10:28] initiating skills group
+[2020/09/13 12:10:28] rateRatio, width, height
+[2020/09/13 12:10:28] 1.0049019607843137,195,85
+[2020/09/13 12:10:28] initiating flasks group
+[2020/09/13 12:10:28] rateRatio, width, height
+[2020/09/13 12:10:28] 1.0049019607843137,156,70
+[2020/09/13 12:12:07] starting app with following parameters: width, height, scaleFactor
+[2020/09/13 12:12:07] 1360,768,1
+[2020/09/13 12:12:07] left, top, right, bottom
+[2020/09/13 12:12:07] 997,675,1192,760
+[2020/09/13 12:12:07] left, top, right, bottom
+[2020/09/13 12:12:07] 220,696,376,766
+[2020/09/13 12:12:08] initiating skills group
+[2020/09/13 12:12:08] rateRatio, width, height
+[2020/09/13 12:12:08] 1.003921568627451,195,85
+[2020/09/13 12:12:08] initiating flasks group
+[2020/09/13 12:12:08] rateRatio, width, height
+[2020/09/13 12:12:08] 1.003921568627451,156,70
+[2020/09/13 12:13:44] starting app with following parameters: width, height, scaleFactor
+[2020/09/13 12:13:44] 1360,768,1
+[2020/09/13 12:13:44] left, top, right, bottom
+[2020/09/13 12:13:44] 997,675,1192,760
+[2020/09/13 12:13:44] left, top, right, bottom
+[2020/09/13 12:13:44] 220,696,376,766
+[2020/09/13 12:13:45] initiating skills group
+[2020/09/13 12:13:45] rateRatio, width, height
+[2020/09/13 12:13:45] 1.003921568627451,244,107
+[2020/09/13 12:13:45] initiating flasks group
+[2020/09/13 12:13:45] rateRatio, width, height
+[2020/09/13 12:13:45] 1.003921568627451,195,87

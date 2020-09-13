@@ -19,8 +19,14 @@ async function captureWindow (win, group, width, height) {
 	const refAspect = 16/9;
 	const aspect = width/height;
 	const rateAspect = refAspect / aspect;
+	let offsetX;
 
-	const offsetX = parseInt(width - width * ((1 - group.screen.offsetX) * rateAspect));
+	if(group.screen.offsetX < 0) {
+		offsetX = parseInt(width + width * group.screen.offsetX * rateAspect);
+	} else {
+		offsetX = parseInt(width * group.screen.offsetX * rateAspect);
+	}
+	
 	const offsetY = parseInt(height * group.screen.offsetY);
 	const sizeX = parseInt(width * group.screen.sourceWidth * rateAspect);
 	const sizeY = parseInt(height * group.screen.sourceHeight);
@@ -28,6 +34,7 @@ async function captureWindow (win, group, width, height) {
 	let args = [offsetX, offsetY, offsetX + sizeX, offsetY + sizeY];
 	
 	if(config.debug) {
+		console.log('left, top, right, bottom');
 		console.log(args);
 	}
 	

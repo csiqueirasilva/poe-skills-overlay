@@ -5,6 +5,13 @@ const ERROR_FILE = './error.log';
 const LOG_FILE = './output.log';
 const LOG_ENCODING = 'utf8';
 
+const consoleLog = console.log;
+
+console.log = (...args) => {
+	consoleLog(...args);
+	Logger.log(args.toString());
+};
+
 class Logger {
 	
 	static getDate() {
@@ -20,7 +27,7 @@ class Logger {
 	}
 	
 	static addLogEntry(msg, file) {
-		fs.appendFileSync(file, '[' + Logger.getDate() + ']\n' + msg);
+		fs.appendFileSync(file, '[' + Logger.getDate() + '] ' + msg + '\n');
 	}
 	
 	static error (msg) {

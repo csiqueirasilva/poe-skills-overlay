@@ -3,6 +3,7 @@ const app = electron.app;
 const screen = electron.screen;
 const { stream } = require('./src/ScreenCapture');
 const Config = require('./src/Config');
+const Logger = require('./src/Logger');
 
 let config = Config.readConfig();
 
@@ -23,8 +24,13 @@ function createWindow () {
 	
 	const display = electron.screen.getPrimaryDisplay();
 	
-	const height = display.bounds.height * display.scaleFactor;
-	const width = display.bounds.width * display.scaleFactor;
+	const height = parseInt(display.bounds.height * display.scaleFactor);
+	const width = parseInt(display.bounds.width * display.scaleFactor);
+
+	if(config.debug) {
+		console.log('starting app with following parameters: width, height, scaleFactor');
+		console.log(width, height, display.scaleFactor);
+	}
 
 	win.setIgnoreMouseEvents(true, { forward: true });
 	
