@@ -8,7 +8,7 @@ if(app === undefined) {
 const fs = require('fs');
 const Logger = require('./Logger');
 
-const CONFIG_FILE = app.getPath('documents') + '/poeskillsoverlay-config.json';
+const CONFIG_FILE = app.getPath('documents') + '\\poeskillsoverlay-config.json';
 const CONFIG_REF_FILE = './config_ref.json';
 
 let currentConfig = null;
@@ -107,10 +107,11 @@ class Config {
 	static saveConfig(config) {
 		currentConfig = config;
 		let ret = true;
-		let write = fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
-		if(!write) {
+		fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+		let exists = fs.existsSync(CONFIG_FILE);
+		if(!exists) {
 			ret = false;
-			Logger.error('Couldnt write config file. Error: ' + e.getMessage());
+			Logger.error('Couldnt write config file.');
 		}
 		return ret;
 	}
