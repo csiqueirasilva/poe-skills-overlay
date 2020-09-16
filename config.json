@@ -1,6 +1,7 @@
 {
 	"debug": false,
 	"log": false,
+	"dx": 9,
 	"groups": [
 		{
 			"name": "skills",
@@ -8,7 +9,7 @@
 				"sourceWidth": 0.1432291666666667,
 				"sourceHeight": 0.1111111111111111,
 				"offsetX": -0.265625,
-				"offsetY": 0.8796296296296296
+				"offsetY": 0.87962962962962965
 			},
 			"tooltips": [
 				{
@@ -128,7 +129,7 @@
 		{
 			"name": "flasks",
 			"screen": {
-				"sourceWidth": 0.1145833333333333,
+				"sourceWidth": 0.1155,
 				"sourceHeight": 0.09125,
 				"offsetX": 0.1614583333333333,
 				"offsetY": 0.9075

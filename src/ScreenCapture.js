@@ -38,7 +38,17 @@ async function captureWindow (win, group, width, height) {
 		console.log(args);
 	}
 	
-	const proc = spawn('bin/capture.exe', args);
+	let execPath = 'bin/capture.exe';
+	
+	if(config.dx === 9) {
+		execPath = 'bin/capture9.exe';
+	}
+	
+	if(config.debug) {
+		console.log('starting group ' + group.name + ' with binary ' + execPath);
+	}
+
+	const proc = spawn(execPath, args);
 	const stream = proc.stdout;
 	
 	let data = [];
