@@ -1,6 +1,4 @@
 const fs = require('fs');
-const Config = require('./Config');
-
 const ERROR_FILE = './error.log';
 const LOG_FILE = './output.log';
 const LOG_ENCODING = 'utf8';
@@ -12,7 +10,13 @@ console.log = (...args) => {
 	Logger.log(args.toString());
 };
 
+let enableLog = false;
+
 class Logger {
+	
+	static shouldLog (op) {
+		enableLog = op;
+	}
 	
 	static getDate() {
 		let m = new Date();
@@ -31,13 +35,12 @@ class Logger {
 	}
 	
 	static error (msg) {
+		consoleLog(msg);
 		Logger.addLogEntry(msg, ERROR_FILE);
 	}
 	
 	static log (msg) {
-		if(Config.shouldLog()) {
-			Logger.addLogEntry(msg, LOG_FILE);
-		}
+		Logger.addLogEntry(msg, LOG_FILE);
 	}
 	
 }

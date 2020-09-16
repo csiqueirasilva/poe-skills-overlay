@@ -7,6 +7,8 @@ const Logger = require('./src/Logger');
 
 let config = Config.readConfig();
 
+Logger.shouldLog(config.log);
+
 function createWindow () {
 
 	const win = new electron.BrowserWindow({
