@@ -53,19 +53,19 @@
 			
 			<div style="margin-left: 3px;">
 				<div style="color:white;">Size</div>
-				<input class="size-range" style="width: calc(20vh - 8px);" type="range" min="25" max="500">
+				<input onfocus="this.blur()" onkeydown="event.preventDefault()" class="size-range" style="width: calc(20vh - 8px);" type="range" min="25" max="500">
 			</div>
 			
 			<div style="margin-left: 3px;">
 				<div style="color:white;">Opacity</div>
-				<input class="opacity-range" style="width: calc(20vh - 8px);" type="range" min="10" max="100">
+				<input onfocus="this.blur()" onkeydown="event.preventDefault()" class="opacity-range" style="width: calc(20vh - 8px);" type="range" min="10" max="100">
 			</div>			
 			
 			<div style="margin: 3px; height: 3vh; overflow: none; font-size: 1em; width: calc(20vh - 8px);">
 			
-				<button class="overlay-btn primary confirm-btn" type="button" style="width: 11vh; position: absolute; left: 3px;">Confirm</button>
+				<button onfocus="this.blur()" class="overlay-btn primary confirm-btn" type="button" style="width: 11vh; position: absolute; left: 3px;">Confirm</button>
 				
-				<button class="reset-btn" style="width: 7.6vh; position: absolute; right: 3px;" class="overlay-btn" type="button">Reset</button>
+				<button onfocus="this.blur()" class="reset-btn" style="width: 7.6vh; position: absolute; right: 3px;" class="overlay-btn" type="button">Reset</button>
 
 			</div>
 			

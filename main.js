@@ -16,7 +16,7 @@ function createWindow () {
 		transparent: true, 
 		frame: false,
 		alwaysOnTop: true,
-		focusable: false,
+		focusable: true,
 		skipTaskbar: true,
 		webPreferences: {
 			nodeIntegration: true,

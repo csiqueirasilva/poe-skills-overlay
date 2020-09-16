@@ -12,7 +12,26 @@ Currently don't know if using it would violate any terms in the game. Refrain fr
 
 was tested on windows 10; there's a parameter to use the capture with dx9, so it in theory should be able to run on windows below 8 (with dx: 9 set on the configuration file)
 
+# how to set up UI
+
+When running the application, there will be two small icons on the top right corner of the screen. One is used for closing the overlay and the other to toggle configuration mode. In this mode, you can left click the overlay icons to open a context menu (similar to right click menu on many applications). In the context menu there will be a few buttons: 
+
+- move icon, on the top left corner: Left click it and hold to move the icon around
+- eye icon, near the move icon: Toggles visibility of the overlay icon (will disappear when saving the configuration, if the eye is dashed)
+- size slider: can increase or decrease the size of the overlay icon
+- opacity slider: can increase or decrease transparency of the overlay icon
+- confirm button: confirms the current settings of the overlay and closes the context menu
+- reset button: resets the settings of the selected overlay icon to the ones when opening the context menu. If you wish to cancel changes made to the overlay icon, you should hit this and then hit the confirm button.
+
+You can also interact with the overlay icon with the keyboard if the context menu for it is open. The functions are as follows:
+
+- Use **arrow keys** to move the overlay icon by 1 pixel in the direction of the key. You can hold the desired key to move a bit faster.
+- Pressing **enter** confirms the settings (same as clicking the confirm button)
+- Pressing **esc** cancels changes made to the overlay icon and closes the context menu (same as hitting the reset button followed by the confirm button)
+
 # configuration file
+
+(this configuration scheme started in v1.0-rc3; previous versions wipe the config.json on reinstall)
 
 **poeskillsoverlay-config.json**, stored inside your 'Documents' folder (or 'My Documents') is created when the application is first run. there resides all your customizations (icons zoom, position, opacity and visibility).
 
