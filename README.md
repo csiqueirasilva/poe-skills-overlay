@@ -8,6 +8,10 @@ Stream the user interface into floating icons, similar to the popular world of w
 
 Currently don't know if using it would violate any terms in the game. Refrain from using it.
 
+# environment
+
+was tested on windows 10
+
 # tested resolutions and environment
 
 added some code to attempt to scale (up or down) everything, based on my display settings (1920x1080).
@@ -25,7 +29,7 @@ tested resolutions (icons should work, but UI is not properly tested)
 - 1366x768
 - 1400x1050
 - 1440x900
-- 1600x900 (ui starts working here)
+- 1600x900
 - 1600x1024
 - 1680x1050
 - 1920x1080
