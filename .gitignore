@@ -3,3 +3,4 @@ teste
 nw
 *.log
 dist
+config.json
