@@ -2,6 +2,7 @@
 	"debug": false,
 	"log": false,
 	"dx": 11,
+	"gridsize": 30,
 	"groups": [
 		{
 			"name": "skills",

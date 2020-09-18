@@ -45,9 +45,23 @@ class Config {
 			try {
 				currentConfig = JSON.parse(jsonRefConfig);
 				let userConfig = JSON.parse(jsonUserConfig);
-				currentConfig.dx = userConfig.dx;
-				currentConfig.debug = userConfig.debug;
-				currentConfig.log = userConfig.log;
+				
+				if(userConfig.dx !== undefined) {
+					currentConfig.dx = userConfig.dx;
+				}
+				
+				if(userConfig.debug !== undefined) {
+					currentConfig.debug = userConfig.debug;
+				}
+				
+				if(userConfig.log !== undefined) {
+					currentConfig.log = userConfig.log;
+				}
+				
+				if(userConfig.gridsize !== undefined) {
+					currentConfig.gridsize = userConfig.gridsize;
+				}
+				
 				userConfig.groups.forEach((userGroup) => {
 					let found = false;
 					let foundGroup = null;
