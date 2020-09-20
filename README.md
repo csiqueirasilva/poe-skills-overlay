@@ -48,6 +48,15 @@ Below is some explanation for the configuration file.
 	"debug": false, /* opens the browser inspector, allows some additional debugging information to be displayed; values are true or false */
 	"log": false, /* logs some information to output.log; values are true or false */
 	"dx": 11, /* sets directX capture mode; values are 9 or 11 */
+	"gridsize": 30, /* sets the size of the squares for grid visual aid, in pixels */
+	"clientLog": "C:\\Games\\Path of Exile\\logs\\Client.txt", /* path to game Client.txt */
+	"autohide": true, /* toggles autohide feature */
+	"autohideAreas": [ /* array of areas where the autohide feature will trigger the hide event */
+		"The Rogue Harbour",
+		"Coastal Hideout",
+		"Oriath",
+		(...)
+	],
 	"groups": [ /* the app captures the screen based on elements in this array.   */
 		{		/* only tooltips will be updated as the user makes any changes to */ the interface */
 			"name": "skills",
