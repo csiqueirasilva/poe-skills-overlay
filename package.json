@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-	"pack": "electron-builder --dir --x64",
-	"dist": "electron-builder --x64"
+    "pack": "electron-builder --dir --x64",
+    "dist": "electron-builder --x64"
   },
   "keywords": [
     "pathofexile"
@@ -14,9 +14,11 @@
   "author": "Caio Siqueira",
   "license": "ISC",
   "dependencies": {
+    "always-tail": "^0.2.0",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+    "tail": "^2.0.4",
     "tmp": "^0.2.1"
   },
   "devDependencies": {
@@ -24,15 +26,14 @@
     "electron-builder": "^22.8.0"
   },
   "build": {
-	"appId": "poe-skills-overlay",
-	"extends": null,
-	"files": [
-	],
-	"extraFiles": [
-	  "./bin/**",
-	  "./config.json",
-	  "./config_ref.json",
-	  "./config_moregroups.json"
-	]
+    "appId": "poe-skills-overlay",
+    "extends": null,
+    "files": [],
+    "extraFiles": [
+      "./bin/**",
+      "./config.json",
+      "./config_ref.json",
+      "./config_moregroups.json"
+    ]
   }
 }

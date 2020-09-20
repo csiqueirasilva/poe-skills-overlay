@@ -3,6 +3,13 @@
 	"log": false,
 	"dx": 11,
 	"gridsize": 30,
+	"clientLog": "C:\\Games\\Path of Exile\\logs\\Client.txt",
+	"autohide": true,
+	"autohideAreas": [
+		"The Rogue Harbour",
+		"Coastal Hideout",
+		"Oriath"
+	],
 	"groups": [
 		{
 			"name": "skills",

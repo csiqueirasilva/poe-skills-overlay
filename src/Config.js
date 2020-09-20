@@ -45,6 +45,18 @@ class Config {
 			try {
 				currentConfig = JSON.parse(jsonRefConfig);
 				let userConfig = JSON.parse(jsonUserConfig);
+
+				if(userConfig.clientLog !== undefined) {
+					currentConfig.clientLog = userConfig.clientLog;
+				}
+
+				if(userConfig.autohideAreas !== undefined) {
+					currentConfig.autohideAreas = userConfig.autohideAreas;
+				}
+				
+				if(userConfig.autohide !== undefined) {
+					currentConfig.autohide = userConfig.autohide;
+				}
 				
 				if(userConfig.dx !== undefined) {
 					currentConfig.dx = userConfig.dx;
@@ -92,7 +104,7 @@ class Config {
 						});
 					}
 				});
-				
+
 			} catch (e) {
 				Logger.error('Couldnt open config file. Cant proceed. Error: ' + e.message);
 				process.exit(-1);

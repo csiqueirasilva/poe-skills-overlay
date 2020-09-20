@@ -4,6 +4,7 @@ const screen = electron.screen;
 const { stream } = require('./src/ScreenCapture');
 const Config = require('./src/Config');
 const Logger = require('./src/Logger');
+const WatchClientTxt = require('./src/WatchClientTxt');
 
 let config = Config.readConfig();
 
@@ -40,13 +41,18 @@ function createWindow () {
 	
 	config.groups.forEach((el) => stream(win, el, width, height));
 
-	win.loadFile('./index.html');
-	
 	let webContents = win.webContents;
 	
 	if(config.debug) {
 		webContents.openDevTools({ mode: 'detach' });
 	}
+	
+	webContents.on('did-finish-load', () => {
+		WatchClientTxt.init(win);
+		WatchClientTxt.start();
+	});
+	
+	win.loadFile('./index.html');
 }
 
 app.whenReady().then(createWindow);
