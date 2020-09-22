@@ -25,7 +25,7 @@
 #define RELEASE(__p) {if(__p!=nullptr){__p->Release();__p=nullptr;}}
 
 #define TARGET_FRAME_TIME_MS 30
-#define _DEBUG 0
+#define _DEBUG 1
 #define SAVE_TO_DISK 0
 #define DXVERSION 11
 
@@ -200,7 +200,7 @@ HRESULT Direct3D9TakeScreenshots()
 
     HRCHECK(surface->UnlockRect());
     
-    HRCHECK(SavePixelsToFile32bppPBGRA());
+    HRCHECK(SavePixels());
 
 cleanup:
     
@@ -210,8 +210,35 @@ cleanup:
 
 LPBYTE inputBuf = nullptr;
 
-void Direct3D11TakeScreenshots() {
+int getRowPitch() {
+    int ret = 0;
 
+    hrG = duplication->AcquireNextFrame(15, &frame_info, &desktop_resource);
+
+    if (hrG == S_OK) {
+        desktop_resource->QueryInterface(__uuidof(ID3D11Texture2D), (void**)&tex);
+
+        m_DeviceContext->CopySubresourceRegion(staging_tex, 0, 0, 0, 0, tex, 0, &cropRect);
+
+        tex->Release();
+
+        m_DeviceContext->Map(staging_tex,          /* Resource */
+            0,                    /* Subresource */
+            D3D11_MAP_READ,       /* Map type. */
+            0,                    /* Map flags. */
+            &map);
+
+        ret = map.RowPitch;
+
+        m_DeviceContext->Unmap(staging_tex, 0);
+
+        duplication->ReleaseFrame();
+    }
+
+    return ret;
+}
+
+void Direct3D11TakeScreenshots() {
 
     hrG = duplication->AcquireNextFrame(15, &frame_info, &desktop_resource);
 
@@ -230,12 +257,12 @@ void Direct3D11TakeScreenshots() {
             &map);
 
         inputBuf = (LPBYTE) map.pData;
-
+        
         {
             int i = 0, j = 0;
 
             // copy memory 32bpp to 24bpp
-            for (int y = 0, i = 0, j = 0; y < (bottom - top); y++, i = y * bytesPerPixel32 * Width, j = y * stride24) {
+            for (int y = 0, i = 0, j = 0; y < (bottom - top); y++, i = y * map.RowPitch, j = y * stride24) {
                 for (int x = left, xI = 0, xJ = 0; x < right; x++, xI = xI + bytesPerPixel32, xJ = xJ + bytesPerPixel24) {
                     shot[j + xJ] = inputBuf[i + xI];
                     shot[j + xJ + 1] = inputBuf[i + xI + 1];
@@ -367,7 +394,13 @@ int main(int argc, char ** argv)
     exportHeight = abs((int) (cropRect.top - cropRect.bottom));
     exportWidth = abs((int) (cropRect.left - cropRect.right));
 
+#if DXVERSION == 11
+    do {
+        pitch = getRowPitch();
+    } while (pitch == 0);
+#else
     pitch = Width * bytesPerPixel32;
+#endif
 
     shot = new BYTE[bytesPerPixel24 * exportHeight * exportWidth];
 

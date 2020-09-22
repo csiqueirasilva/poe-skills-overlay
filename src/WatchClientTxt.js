@@ -21,7 +21,7 @@ class WatchClientTxt {
 			}
 			
 			tail = new Tail(config.clientLog, '\n', {
-				interval: 100
+				interval: 500
 			});
 			
 			tail.on("line", (data) => {
