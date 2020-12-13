@@ -38,7 +38,7 @@ body {
 
 .btn-config-mode {
 	color: black;
-	stroke: unset !important;
+	stroke: white;
 }
 
 .overlay-btn.primary {
